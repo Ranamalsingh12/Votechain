@@ -2,12 +2,18 @@ import Table from "react-bootstrap/Table";
 import React from "react";
 import "../css/vote.css";
 import NavBar from "../components/NavBar";
+import VotingFinished from "./VotingFinished";
 
 function Vote(props) {
+
+
+  // if(props.remainingTime < 1) {
+  //   return <VotingFinished />
+  // }
+
   return (
     <>
-      <NavBar />
-      <div className="d-flex flex-column align-items-center justify-content-center mt-3">
+      <div className="d-flex flex-column align-items-center justify-content-center">
         <div className="d-flex flex-column align-items-center justify-content-center contain">
           <div className="">
             <div className="content">

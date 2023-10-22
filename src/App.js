@@ -2,15 +2,15 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import { contractAbi, contractAddress } from "./contractDetails/contract";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Vote from './pages/Vote';
-// import NavBar from './components/NavBar';
+import { Routes, Route } from "react-router-dom";
 import Profile from "./pages/Profile";
-// import ContactUs from './pages/ContactUs';
 import LoginPage from "./pages/LoginPage";
 import { ToastContainer, toast } from "react-toastify";
 import Vote from "./pages/Vote";
 import ContactForm from "./pages/ContactUs";
+import NavBar from "./components/NavBar";
+import { Layout, Typography } from "antd";
+import { Link } from "react-router-dom";
 
 function App() {
   const [provider, setProvider] = useState(null);
@@ -187,10 +187,14 @@ function App() {
     window.localStorage.removeItem("address");
   }
 
+  if (!localStorage.getItem("auth")) {
+    return <LoginPage connectWallet={connectToMetamask} />;
+  }
+
   return (
     <>
-      <div className="App">
-        {localStorage.getItem("auth") ? (
+      <div className="container">
+        {/* {localStorage.getItem("auth") ? (
           <div>
             <Router>
               <Routes>
@@ -216,8 +220,44 @@ function App() {
           </div>
         ) : (
           <LoginPage connectWallet={connectToMetamask} />
-        )}
+        )} */}
 
+        <div className="sidebar">
+          <NavBar />
+        </div>
+
+        <div className="content">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Vote
+                  account={localStorage.getItem("address")}
+                  candidates={candidates}
+                  remainingTime={remainingTime}
+                  number={number}
+                  handleNumberChange={handleNumberChange}
+                  voteFunction={vote}
+                  showButton={CanVote}
+                  logOut={logOut}
+                />
+              }
+            />
+            <Route path="/contact" element={<ContactForm />} />
+            <Route path="/knowMore" element={<Profile />} />
+          </Routes>
+        </div>
+
+        <div className="footer">
+          <Typography.Title
+            level={5}
+            style={{ color: "white", textAlign: "center" }}
+          >
+            Made with ❤️ By Team Clover
+            <br />
+            All Rights Reserved.
+          </Typography.Title>
+        </div>
       </div>
     </>
   );
