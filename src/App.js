@@ -2,15 +2,13 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import { contractAbi, contractAddress } from "./contractDetails/contract";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, redirect } from "react-router-dom";
 import Profile from "./pages/Profile";
 import LoginPage from "./pages/LoginPage";
-import { ToastContainer, toast } from "react-toastify";
 import Vote from "./pages/Vote";
 import ContactForm from "./pages/ContactUs";
 import NavBar from "./components/NavBar";
-import { Layout, Typography } from "antd";
-import { Link } from "react-router-dom";
+import { Typography } from "antd";
 
 function App() {
   const [provider, setProvider] = useState(null);
@@ -38,7 +36,7 @@ function App() {
         );
       }
     };
-  });
+  },[handleAccountsChanged]);
 
   async function vote() {
     // const provider = new ethers.providers.Web3Provider(window.ethereum);

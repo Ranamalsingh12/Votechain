@@ -46,44 +46,45 @@ const NavBar = (props) => {
           <MenuOutlined />
         </Button>
       </div>
-      {activeMenu && (
-        <Menu theme="dark">
-          <Menu.Item icon={<HomeOutlined />}>
-            <Link to="/">Voting</Link>
-          </Menu.Item>
-          <Menu.Item icon={<FundOutlined />}>
-            <Link to="/knowMore">Know More</Link>
-          </Menu.Item>
-          <Menu.Item icon={<BulbOutlined />}>
-            <Link to="/contact">Contact Us</Link>
-          </Menu.Item>
-        </Menu>
-      )}
+      <div className="menu-items">
+        {activeMenu && (
+          <Menu style={{color: "white"}} theme="">
+            <Menu.Item icon={<HomeOutlined />}>
+              <Link to="/">Voting</Link>
+            </Menu.Item>
+            <Menu.Item icon={<FundOutlined />}>
+              <Link to="/knowMore">Know More</Link>
+            </Menu.Item>
+            <Menu.Item icon={<BulbOutlined />}>
+              <Link to="/contact">Contact Us</Link>
+            </Menu.Item>
+          </Menu>
+        )}
+      </div>
     </div>
   );
 };
 
 export default NavBar;
 
-
-    // <nav className="navbar" style={{ border: "1px solid white" }}>
-    //   <div className="container">
-    //     <div className="logo">
-    //       <p className="p-tag">VoteChain</p>
-    //     </div>
-    //     <div className="menu-icon" onClick={handleShowNavbar}></div>
-    //     <div className={`nav-elements  ${showNavbar && "active"}`}>
-    //       <ul>
-    //         <li>
-    //           <NavLink to="/">Vote Now</NavLink>
-    //         </li>
-    //         <li>
-    //           <NavLink to="/knowMore">Know More</NavLink>
-    //         </li>
-    //         <li>
-    //           <NavLink to="/contact">Contact Us</NavLink>
-    //         </li>
-    //       </ul>
-    //     </div>
-    //   </div>
-    // </nav>
+// <nav className="navbar" style={{ border: "1px solid white" }}>
+//   <div className="container">
+//     <div className="logo">
+//       <p className="p-tag">VoteChain</p>
+//     </div>
+//     <div className="menu-icon" onClick={handleShowNavbar}></div>
+//     <div className={`nav-elements  ${showNavbar && "active"}`}>
+//       <ul>
+//         <li>
+//           <NavLink to="/">Vote Now</NavLink>
+//         </li>
+//         <li>
+//           <NavLink to="/knowMore">Know More</NavLink>
+//         </li>
+//         <li>
+//           <NavLink to="/contact">Contact Us</NavLink>
+//         </li>
+//       </ul>
+//     </div>
+//   </div>
+// </nav>
