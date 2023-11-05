@@ -25,8 +25,7 @@ const Profile = () => {
                   The Bharatiya Janata Party (BJP), often referred to simply as
                   the BJP, is one of the two major political parties in India,
                   the other being the Indian National Congress.The BJP was
-                  founded in 1980 and is considered a right-wing political party
-                  in India.
+                  founded in 1980.
                 </p>
                 <button className="card-btn">
                   Know More<span>→</span>
@@ -51,8 +50,7 @@ const Profile = () => {
                 <p className="card-text">
                   The Congress Party, officially known as the Indian National
                   Congress (INC), is one of the oldest and most prominent
-                  political parties in India.Rahul Gandhi present congress over
-                  a year firstly Jawaharlal Nehru started congress.
+                  political parties in India.
                 </p>
                 <button className="card-btn">
                   Know More<span>→</span>
@@ -74,9 +72,7 @@ const Profile = () => {
                 <p className="card-text">
                   The Aam Aadmi Party (AAP) is a prominent political party in
                   India that was founded in 2012. The name "Aam Aadmi"
-                  translates to "common man" in Hindi, reflecting the party's
-                  stated commitment. AAP gained prominence in the National
-                  Capital Territory of Delhi.
+                  translates to "common man" in Hindi.
                 </p>
                 <button className="card-btn">
                   Know More<span>→</span>
@@ -102,8 +98,7 @@ const Profile = () => {
                   The Samajwadi Party (SP) is a prominent political party in
                   India, primarily active in the northern state of Uttar
                   Pradesh. Founded in 1992 by Mulayam Singh Yadav, the party has
-                  its roots in socialist ideology.The party was formed with the
-                  goal of representing the interests of
+                  its roots in socialist ideology.
                 </p>
                 <button className="card-btn">
                   Know More<span>→</span>
@@ -129,8 +124,7 @@ const Profile = () => {
                   The Bahujan Samaj Party (BSP) is a prominent political party
                   in India, primarily active in the northern state of Uttar
                   Pradesh and some other regions. Founded in 1984 by Kanshi Ram
-                  and later led by Mayawati.particularly those from the Yadav
-                  community.
+                  and later led by Mayawati.
                 </p>
                 <button className="card-btn">
                   Know More<span>→</span>
@@ -156,8 +150,7 @@ const Profile = () => {
                   Janata Dal, short for "Janata Dal," is a prominent political
                   party in India. The name "Janata Dal" translates to "People's
                   Party" in Hindi. This political party has played a significant
-                  role in Indian politics.The merger was an attempt to unite
-                  different factions.
+                  role in Indian politics.
                 </p>
                 <button className="card-btn">
                   Know More<span>→</span>

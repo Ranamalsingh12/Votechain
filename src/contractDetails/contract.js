@@ -1,140 +1,140 @@
-export const contractAddress = "0x41ABc19f4B25B788F5d030aF64c47ebc7531D331";
+export const contractAddress = "0xee354521A08D2c217B87F80985d9C3D30076648a";
 
 export const contractAbi = [
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "string[]",
-        "name": "candidateNames",
-        "type": "string[]"
+        internalType: "string[]",
+        name: "candidateNames",
+        type: "string[]",
       },
       {
-        "internalType": "uint256",
-        "name": "votingDuration",
-        "type": "uint256"
-      }
+        internalType: "uint256",
+        name: "votingDuration",
+        type: "uint256",
+      },
     ],
-    "stateMutability": "nonpayable",
-    "type": "constructor"
+    stateMutability: "nonpayable",
+    type: "constructor",
   },
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "string",
-        "name": "_cname",
-        "type": "string"
-      }
+        internalType: "string",
+        name: "_cname",
+        type: "string",
+      },
     ],
-    "name": "addCandidate",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    name: "addCandidate",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
   },
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
     ],
-    "name": "candidates",
-    "outputs": [
+    name: "candidates",
+    outputs: [
       {
-        "internalType": "string",
-        "name": "name",
-        "type": "string"
+        internalType: "string",
+        name: "name",
+        type: "string",
       },
       {
-        "internalType": "uint256",
-        "name": "voteCount",
-        "type": "uint256"
-      }
+        internalType: "uint256",
+        name: "voteCount",
+        type: "uint256",
+      },
     ],
-    "stateMutability": "view",
-    "type": "function"
+    stateMutability: "view",
+    type: "function",
   },
   {
-    "inputs": [],
-    "name": "getDataOfCandidate",
-    "outputs": [
+    inputs: [],
+    name: "getDataOfCandidate",
+    outputs: [
       {
-        "components": [
+        components: [
           {
-            "internalType": "string",
-            "name": "name",
-            "type": "string"
+            internalType: "string",
+            name: "name",
+            type: "string",
           },
           {
-            "internalType": "uint256",
-            "name": "voteCount",
-            "type": "uint256"
-          }
+            internalType: "uint256",
+            name: "voteCount",
+            type: "uint256",
+          },
         ],
-        "internalType": "struct Voting.Candidate[]",
-        "name": "",
-        "type": "tuple[]"
-      }
+        internalType: "struct Voting.Candidate[]",
+        name: "",
+        type: "tuple[]",
+      },
     ],
-    "stateMutability": "view",
-    "type": "function"
+    stateMutability: "view",
+    type: "function",
   },
   {
-    "inputs": [],
-    "name": "getRemainingTime",
-    "outputs": [
+    inputs: [],
+    name: "getRemainingTime",
+    outputs: [
       {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
     ],
-    "stateMutability": "view",
-    "type": "function"
+    stateMutability: "view",
+    type: "function",
   },
   {
-    "inputs": [],
-    "name": "getVotingStatus",
-    "outputs": [
+    inputs: [],
+    name: "getVotingStatus",
+    outputs: [
       {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
     ],
-    "stateMutability": "view",
-    "type": "function"
+    stateMutability: "view",
+    type: "function",
   },
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "uint256",
-        "name": "indexOfCandidate",
-        "type": "uint256"
-      }
+        internalType: "uint256",
+        name: "indexOfCandidate",
+        type: "uint256",
+      },
     ],
-    "name": "vote",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    name: "vote",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
   },
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
     ],
-    "name": "voters",
-    "outputs": [
+    name: "voters",
+    outputs: [
       {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
     ],
-    "stateMutability": "view",
-    "type": "function"
-  }
+    stateMutability: "view",
+    type: "function",
+  },
 ];

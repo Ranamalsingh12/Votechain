@@ -9,6 +9,8 @@ import Vote from "./pages/Vote";
 import ContactForm from "./pages/ContactUs";
 import NavBar from "./components/NavBar";
 import { Typography } from "antd";
+import Stats from "./pages/Stats";
+import Login from "./components/Login";
 
 function App() {
   const [provider, setProvider] = useState(null);
@@ -186,7 +188,7 @@ function App() {
   }
 
   if (!localStorage.getItem("auth")) {
-    return <LoginPage connectWallet={connectToMetamask} />;
+    return <Login connectWallet={connectToMetamask} />;
   }
 
   return (
@@ -241,7 +243,7 @@ function App() {
                 />
               }
             />
-            <Route path="/contact" element={<ContactForm />} />
+            <Route path="/stats" element={<Stats candidates={candidates} />} />
             <Route path="/knowMore" element={<Profile />} />
           </Routes>
         </div>

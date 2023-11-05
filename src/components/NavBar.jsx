@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "../css/navbar.css";
 import { Button, Menu, Typography, Avatar } from "antd";
 import { Link } from "react-router-dom";
+import Logo from '../Images/logo.jpeg'
 import {
   HomeOutlined,
   MoneyCollectOutlined,
@@ -35,7 +36,7 @@ const NavBar = (props) => {
   return (
     <div className="nav-container">
       <div className="logo-container">
-        {/* <Avatar src={icon} size="large" /> */}
+        <Avatar src={Logo} size="large" />
         <Typography.Title level={2} className="logo">
           <Link to="/">VoteChain</Link>
         </Typography.Title>
@@ -48,15 +49,15 @@ const NavBar = (props) => {
       </div>
       <div className="menu-items">
         {activeMenu && (
-          <Menu style={{color: "white"}} theme="">
+          <Menu style={{color: "white", fontWeight:"bold", fontSize:"16px"}} theme="">
             <Menu.Item icon={<HomeOutlined />}>
-              <Link to="/">Voting</Link>
+              <Link style={{color:"white", textDecoration:"none"}} to="/">Voting</Link>
             </Menu.Item>
             <Menu.Item icon={<FundOutlined />}>
-              <Link to="/knowMore">Know More</Link>
+              <Link style={{color:"white", textDecoration:"none"}} to="/knowMore">Know More</Link>
             </Menu.Item>
             <Menu.Item icon={<BulbOutlined />}>
-              <Link to="/contact">Contact Us</Link>
+              <Link style={{color:"white", textDecoration:"none"}} to="/stats">Live Stats</Link>
             </Menu.Item>
           </Menu>
         )}

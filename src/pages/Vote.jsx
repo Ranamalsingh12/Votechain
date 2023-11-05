@@ -6,6 +6,8 @@ import VotingFinished from "./VotingFinished";
 
 function Vote(props) {
 
+  const hours = Math.floor((props.remainingTime % (60 * 24)) / 60);
+  const minutes = props.remainingTime % 60;
 
   // if(props.remainingTime < 1) {
   //   return <VotingFinished />
@@ -13,13 +15,13 @@ function Vote(props) {
 
   return (
     <>
-      <div className="d-flex flex-column align-items-center justify-content-center">
+      <div className="d-flex pb-3 flex-column align-items-center justify-content-center">
         <div className="d-flex flex-column align-items-center justify-content-center contain">
           <div className="">
             <div className="content">
               <h2>You are Connected to MetaMask</h2>
               <p>Metamask Account : {props.account}</p>
-              <p>Remaining Time : {props.remainingTime}</p>
+              <p>Remaining Time : {hours} Hours {minutes} Minutes</p>
             </div>
 
             <div className="vote-div d-flex flex-row justify-content-center">
@@ -58,7 +60,6 @@ function Vote(props) {
                 <tr>
                   <th>Index</th>
                   <th>Candidate Name</th>
-                  <th>Vote Count</th>
                 </tr>
               </thead>
               <tbody>
@@ -67,7 +68,6 @@ function Vote(props) {
                     <tr key={index}>
                       <td>{index}</td>
                       <td>{candidate.name}</td>
-                      <td>{candidate.voteCount}</td>
                     </tr>
                   );
                 })}
@@ -75,9 +75,9 @@ function Vote(props) {
             </Table>
           </div>
 
-          <button onClick={props.logOut} className="btn btn-danger">
+          {/* <button onClick={props.logOut} className="btn btn-danger">
             LogOut
-          </button>
+          </button> */}
         </div>
       </div>
     </>
