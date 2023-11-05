@@ -14,28 +14,28 @@ This project is an implementation of a secure and transparent voting system usin
 # Login Page
 <div align="center"><a name="menu"></a>
 
-<img src="/src/ImagesGithub/Login.jpg" />
+<img src="/src/Images/Login.jpeg" />
 
 </div>
 
 # Home Page
 <div align="center"><a name="menu"></a>
 
-<img src="/src/ImagesGithub/Home.png" />
+<img src="/src/Images/Home.jpeg" />
 
 </div>
 
 # Stats Page
 <div align="center"><a name="menu"></a>
 
-<img src="/src/ImagesGithub/LiveStats.png" />
+<img src="/src/Images/LiveStats.jpeg" />
 
 </div>
 
 # Know More Page
 <div align="center"><a name="menu"></a>
 
-<img src="/src/ImagesGithub/KnowMore.png" />
+<img src="/src/Images/KnowMore.jpeg" />
 
 </div>
 
@@ -59,20 +59,20 @@ This project is an implementation of a secure and transparent voting system usin
 
 1. Clone the repository:
 
-   bash
+   ```bash
    git clone https://github.com/Ranamalsingh12/Votechain.git
    
 2. Cd into the Folder
-   bash
+   ```bash
    cd votechain
 3. Install dependencies:
 
-    bash
+    ```bash
     npm install
 
 4. Start the development server:
 
-    bash
+    ```bash
     npm start
 5. Access the application in your web browser at:
    ```bash
